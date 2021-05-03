@@ -71,22 +71,34 @@
         <div class="container flex">
           <ul class="about-us-list">
             <li class="about-us-item">
-              <img
-                src="./images/about-us-1.png"
-                class="img-responsive"
-                alt="борода"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="./images/about-us-1-desktop.png"
+                  media="(min-width: 1024px)"
+                />
+                <img
+                  src="./images/about-us-1.png"
+                  class="img-responsive"
+                  alt="борода"
+                  width="270"
+                  height="445"
+                />
+              </picture>
             </li>
             <li class="about-us-item">
-              <img
-                src="./images/about-us-2.png"
-                class="img-responsive"
-                alt="бритье"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="./images/about-us-2-desktop.png"
+                  media="(min-width: 1024px)"
+                />
+                <img
+                  src="./images/about-us-2.png"
+                  class="img-responsive"
+                  alt="бритье"
+                  width="270"
+                  height="445"
+                />
+              </picture>
             </li>
           </ul>
 
@@ -175,32 +187,35 @@
 
       <!-- О нас в цифрах -->
       <section id="benefits" class="section-padding">
-        <ul class="benefits-list">
-          <li class="benefits-item">
-            <p class="benefits-number">600<sup>+</sup></p>
-            <p class="benefits-text">Довольных клиентов в день</p>
-          </li>
-          <li class="benefits-item">
-            <p class="benefits-number">50<sup>+</sup></p>
-            <p class="benefits-text">Наград за отличный сервис</p>
-          </li>
-          <li class="benefits-item">
-            <p class="benefits-number">20<sup>+</sup></p>
-            <p class="benefits-text">Лучших мастеров Киева</p>
-          </li>
-          <li class="benefits-item">
-            <p class="benefits-number">100<sup>+</sup></p>
-            <p class="benefits-text">Подарков постоянным клиентам</p>
-          </li>
-        </ul>
+        <div class="container flex">
+          <ul class="benefits-list">
+            <li class="benefits-item">
+              <p class="benefits-number">600<sup>+</sup></p>
+              <p class="benefits-text">Довольных клиентов в день</p>
+            </li>
+            <li class="benefits-item">
+              <p class="benefits-number">50<sup>+</sup></p>
+              <p class="benefits-text">Наград за отличный сервис</p>
+            </li>
+            <li class="w-100"></li>
+            <li class="benefits-item">
+              <p class="benefits-number">20<sup>+</sup></p>
+              <p class="benefits-text">Лучших мастеров Киева</p>
+            </li>
+            <li class="benefits-item">
+              <p class="benefits-number">100<sup>+</sup></p>
+              <p class="benefits-text">Подарков постоянным клиентам</p>
+            </li>
+          </ul>
 
-        <div>
-          <p class="section-subtitle">старая традиционная школа</p>
-          <h2 class="section-title">Почему приходят именно к нам?</h2>
-          <p class="main-text">
-            О нас говорят только хорошее. Но лучше 1 раз увидеть и
-            прочувствовать, чем 10 раз прочитать.
-          </p>
+          <div class="benefits-content">
+            <p class="section-subtitle">старая традиционная школа</p>
+            <h2 class="section-title">Почему приходят именно к нам?</h2>
+            <p class="main-text">
+              О нас говорят только хорошее. Но лучше 1 раз увидеть и
+              прочувствовать, чем 10 раз прочитать.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -404,38 +419,34 @@
       <!-- Контакты -->
       <section id="contacts" class="constacts-section">
         <div class="container flex">
-          <div class="contacts-column section-padding">
-            <h2 class="section-title text-white">Онлайн-запись</h2>
-            <!-- Форма обратной связи -->
-            <div class="form-container">
-  <form name="form-barbara">
-      <div class="form-contacts" >
-                            <label class="form-field label">
-                              <input type="text" name="username" class="form-input" placeholder="Имя*"/>
-                                
-                                
-                            </label>
-                            <label class="form-field label">
-                                
-                                <input type="tel" name="phone_number" class="form-input"
-                                placeholder="Телефон*" />
-                                
-                            </label>
-                        </div>
-                        
-<div class="form-message">
-                            <label class="form-field label">
-                                <span class="form-label">
-                                <textarea name="comment" rows="6" placeholder="Сообщение" class="comment-area form-input"
-                                ></textarea>
-                            </label></div></form>    
-                            </div>                        
-                            
-            <button class="btn text-white">Онлайн-запись</button>
+          <div class="contacts-column">
+            <h2 class="section-title text-white margin-b-xl">Онлайн-запись</h2>
+            <form class="contact-form">
+              <div class="flex margin-b-xl">
+                <input
+                  type="text"
+                  name="first_name"
+                  class="form-field text-field"
+                  placeholder="Имя"
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  class="form-field text-field"
+                  placeholder="Телефон"
+                />
+              </div>
+              <textarea
+                name="message"
+                class="form-field form-message margin-b-xl"
+                placeholder="Сообщение"
+              ></textarea>
+            </form>
+            <button class="btn text-white">Отправить</button>
           </div>
 
-          <div class="contacts-column section-padding">
-            <h2 class="section-title text-white">Контакты</h2>
+          <div class="contacts-column">
+            <h2 class="section-title text-white margin-b-xl">Контакты</h2>
             <address>
               <ul class="contacts-list">
                 <li class="contacts-item address">
@@ -454,15 +465,15 @@
               </ul>
             </address>
 
-            <p class="section-subtitle">время работы</p>
-            <p>Ежедневно с 9:00 до 22:00</p>
+            <p class="section-subtitle text-grey">время работы</p>
+            <p class="contacts-schedule">Ежедневно с 9:00 до 22:00</p>
           </div>
         </div>
       </section>
     </main>
     <!-- Подвал сайта -->
-    <footer lang="en">
-      <div class="container">
+    <footer lang="en" class="footer">
+      <div class="container flex justify-between">
         <p class="copyright">&#169; Copyright 2020</p>
         <ul class="socials">
           <li class="socials-item">
